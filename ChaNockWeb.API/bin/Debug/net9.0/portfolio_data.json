@@ -1,0 +1,94 @@
+[
+  {
+    "id": "nature-01",
+    "title": "Misty Sunrise Peaks",
+    "description": "A dramatic sunrise over mountains, capturing the layered mist and first light piercing the valleys.",
+    "category": "nature",
+    "type": "image",
+    "src": "/src/assets/portfolio_nature.png",
+    "order": 1,
+    "metadata": {
+      "camera": "Sony Alpha 7R V",
+      "lens": "FE 24-70mm F2.8 GM II",
+      "aperture": "f/8.0",
+      "shutterSpeed": "1/160s",
+      "iso": "100",
+      "location": "Seoraksan, South Korea",
+      "date": "2026-05-12"
+    }
+  },
+  {
+    "id": "portrait-01",
+    "title": "The Wisdom of Wrinkles",
+    "description": "Artistic high-contrast portrait emphasizing natural texture, character, and depth of expressions.",
+    "category": "portrait",
+    "type": "image",
+    "src": "/src/assets/portfolio_portrait.png",
+    "order": 2,
+    "metadata": {
+      "camera": "Fujifilm GFX 100S",
+      "lens": "GF 110mm F2 R LM WR",
+      "aperture": "f/2.0",
+      "shutterSpeed": "1/125s",
+      "iso": "200",
+      "location": "Seoul Studio, South Korea",
+      "date": "2026-04-05"
+    }
+  },
+  {
+    "id": "arch-01",
+    "title": "Concrete Shadow Geometry",
+    "description": "Minimalist composition of modern concrete geometry under sharp sunlight, focusing on shadows and negative space.",
+    "category": "architecture",
+    "type": "image",
+    "src": "/src/assets/portfolio_architecture.png",
+    "order": 3,
+    "metadata": {
+      "camera": "Leica Q3",
+      "lens": "Summilux 28mm f/1.7 ASPH",
+      "aperture": "f/5.6",
+      "shutterSpeed": "1/500s",
+      "iso": "100",
+      "location": "Dongdaemun Design Plaza, Seoul",
+      "date": "2026-06-20"
+    }
+  },
+  {
+    "id": "video-01",
+    "title": "Flowing Water Semiotics",
+    "description": "A cinemagraph-style loop of forest water rapids, expressing the continuous passage of time.",
+    "category": "video",
+    "type": "video",
+    "src": "https://assets.mixkit.co/videos/preview/mixkit-forest-stream-in-the-sunlight-529-large.mp4",
+    "poster": "/src/assets/portfolio_nature.png",
+    "order": 4,
+    "metadata": {
+      "camera": "RED V-Raptor 8K",
+      "lens": "Zeiss Supreme Prime 50mm",
+      "aperture": "T/2.0",
+      "shutterSpeed": "1/100s (180° Shutter)",
+      "iso": "800",
+      "location": "Gangwon Valley, South Korea",
+      "date": "2026-06-01"
+    }
+  },
+  {
+    "id": "video-02",
+    "title": "Urban Traffic Trails",
+    "description": "Time-lapse loop showcasing dynamic city light trails, contrasting motion with static architecture.",
+    "category": "video",
+    "type": "video",
+    "src": "https://assets.mixkit.co/videos/preview/mixkit-night-time-lapse-of-a-busy-city-intersection-40615-large.mp4",
+    "poster": "/src/assets/portfolio_architecture.png",
+    "order": 5,
+    "metadata": {
+      "camera": "Sony Alpha 7S III",
+      "lens": "FE 16-35mm F2.8 GM",
+      "aperture": "f/11",
+      "shutterSpeed": "2s (Time-lapse)",
+      "iso": "80",
+      "location": "Teheran-ro, Seoul",
+      "date": "2026-06-15"
+    }
+  }
+]

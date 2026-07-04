@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "lDoYBuv7ynuYKGAhZiUiMLmob3s8eI9Mo57GpC5+g8k=",
+  "Source": "ChaNockWeb.API",
+  "BasePath": "_content/ChaNockWeb.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
