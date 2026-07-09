@@ -1,0 +1,10 @@
+# Local image source folder
+imagefile/
+
+# Build and IDE cache folders
+.vs/
+[Bb]in/
+[Oo]bj/
+node_modules/
+dist/
+.gemini/

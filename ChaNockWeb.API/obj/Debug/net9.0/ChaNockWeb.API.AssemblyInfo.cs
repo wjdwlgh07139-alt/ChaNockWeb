@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ChaNockWeb.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+95f8cf856f472abebc8be48420802728d79eec73")]
 [assembly: System.Reflection.AssemblyProductAttribute("ChaNockWeb.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ChaNockWeb.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
