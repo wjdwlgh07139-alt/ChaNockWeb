@@ -1,16 +1,16 @@
 /* Minimalist Portfolio Styles inspired by annileppala.fi and yosuke yajima */
 
 :root {
-  /* Warm off-white ivory background with a hint of yellow */
-  --bg-primary: #FAF6EC;
-  --bg-secondary: #F4EFE0;
+  /* Slate-50 background for a clean modern aesthetic */
+  --bg-primary: #F8FAFC;
+  --bg-secondary: #F1F5F9;
   --text-primary: #111111;
   --text-secondary: #555555;
   --text-muted: #888888;
   /* Thin borders */
   --border-color: rgba(0, 0, 0, 0.05);
   --accent: #000000;
-  
+
   /* Primary Font: Apple SD Gothic Neo for ALL content (No other fonts used) */
   --font-sans: "Apple SD Gothic Neo", "AppleSDGothicNeo", "Malgun Gothic", sans-serif;
   --font-serif: "Apple SD Gothic Neo", "AppleSDGothicNeo", "Malgun Gothic", sans-serif;
@@ -22,7 +22,8 @@ body {
   color: var(--text-primary) !important;
   font-family: var(--font-sans);
   letter-spacing: -0.03em;
-  font-weight: 200; /* Extremely thin font weight globally */
+  font-weight: 200;
+  /* Extremely thin font weight globally */
   -webkit-font-smoothing: antialiased;
 }
 
@@ -42,13 +43,19 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 2000; /* Set higher than nav-menu-overlay */
-  background: rgba(250, 246, 236, 0.95);
+  z-index: 2000;
+  /* Set higher than nav-menu-overlay */
+  background: rgba(248, 250, 252, 0.95);
   transition: all 0.3s ease;
 }
 
 .portfolio-nav.menu-open {
   background: transparent;
+}
+
+.main-content.main-view-active {
+  max-width: 100%;
+  padding: 0; /* Fully stretch to screen edge, minimizing left/right margins to absolute zero */
 }
 
 .nav-container {
@@ -62,7 +69,8 @@ body {
 .brand {
   font-family: var(--font-sans);
   font-weight: 300;
-  font-size: 30px; /* Slightly reduced from 36px */
+  font-size: 30px;
+  /* Slightly reduced from 36px */
   letter-spacing: -0.02em;
   color: var(--text-primary);
   /* Removed text-transform: uppercase so it displays as "Cha Nok" */
@@ -157,7 +165,8 @@ body {
   padding: 5px 0;
 }
 
-.menu-link-item:hover, .menu-link-item.active {
+.menu-link-item:hover,
+.menu-link-item.active {
   color: var(--text-primary);
   padding-left: 4px;
 }
@@ -215,9 +224,85 @@ body {
   animation: fadeIn 0.8s ease;
 }
 
+/* Main View Styles */
+.main-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.main-photo-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: transparent; /* Remove background box color */
+}
+
+@keyframes slowZoom {
+  from {
+    transform: scale(1.04);
+    opacity: 0.8;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.main-photo {
+  width: 100%;
+  max-width: 100%;
+  max-height: 95vh; /* Extremely large display on screen, minimizing side margins */
+  height: auto;
+  display: block;
+  object-fit: contain;
+  margin: 0 auto;
+  animation: slowZoom 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  pointer-events: none; /* Disables visual search tags, right-clicks, and dragging */
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Instagram link underneath main photo */
+.main-instagram-link-container {
+  margin-bottom: 15px; /* Visual spacing above copyright text */
+  text-align: center;
+  width: 100%;
+}
+
+.main-instagram-link {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-bottom: 0.5px solid transparent;
+  transition: all 0.3s ease;
+  font-weight: 200;
+  letter-spacing: 0.05em;
+  padding-bottom: 2px;
+}
+
+.main-instagram-link:hover {
+  color: var(--text-primary);
+  border-bottom: 0.5px solid var(--text-primary);
+}
+
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Works View Header Elements */
@@ -291,6 +376,9 @@ body {
   width: 100%;
   height: auto;
   display: block;
+  pointer-events: none; /* Disables visual search tags, right-clicks, and dragging */
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 /* Exhibition View */
@@ -333,7 +421,8 @@ body {
 }
 
 .ex-title {
-  font-family: var(--font-sans); /* Use Apple SD Gothic Neo */
+  font-family: var(--font-sans);
+  /* Use Apple SD Gothic Neo */
   font-size: 18px;
   font-weight: 200;
   color: var(--text-primary);
@@ -354,10 +443,12 @@ body {
 }
 
 .about-name {
-  font-family: var(--font-sans); /* Use Apple SD Gothic Neo */
+  font-family: var(--font-sans);
+  /* Use Apple SD Gothic Neo */
   font-size: 38px;
   font-weight: 200;
-  margin-bottom: 35px; /* Increased from 8px to add more spacing */
+  margin-bottom: 35px;
+  /* Increased from 8px to add more spacing */
   letter-spacing: -0.02em;
 }
 
@@ -380,7 +471,8 @@ body {
   font-size: 15px;
   line-height: 1.7;
   color: var(--text-secondary);
-  text-align: center; /* Changed from justify to center */
+  text-align: center;
+  /* Changed from justify to center */
   font-weight: 200;
 }
 
@@ -476,14 +568,15 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(250, 246, 236, 0.95);
+  background: rgba(248, 250, 252, 0.95);
   z-index: 3000;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.auth-modal, .media-form-modal {
+.auth-modal,
+.media-form-modal {
   background: var(--bg-primary);
   border: 0.5px solid var(--border-color);
   padding: 30px;
@@ -505,7 +598,9 @@ body {
   font-weight: 200;
 }
 
-.form-group input, .form-group select, .form-group textarea {
+.form-group input,
+.form-group select,
+.form-group textarea {
   border: 0.5px solid var(--border-color);
   padding: 8px;
   font-family: var(--font-sans);
@@ -515,13 +610,19 @@ body {
   font-weight: 200;
 }
 
-.form-grid-2, .form-grid-3 {
+.form-grid-2,
+.form-grid-3 {
   display: grid;
   gap: 12px;
 }
 
-.form-grid-2 { grid-template-columns: 1fr 1fr; }
-.form-grid-3 { grid-template-columns: repeat(3, 1fr); }
+.form-grid-2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.form-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
 
 .modal-actions {
   display: flex;
@@ -551,23 +652,27 @@ body {
 
 /* Mobile responsive fixes */
 @media (max-width: 768px) {
+  .main-content.main-view-active {
+    padding: 0; /* Edge-to-edge full width display for main photo on mobile */
+  }
+
   .nav-container {
     padding: 20px;
   }
-  
+
   .brand {
     font-size: 20px;
   }
-  
+
   .main-content {
     margin-top: 100px;
     padding: 20px;
   }
-  
+
   .irregular-vertical-flow {
     gap: 40px;
   }
-  
+
   .flow-item-wrapper.layout-left,
   .flow-item-wrapper.layout-right,
   .flow-item-wrapper.layout-center {

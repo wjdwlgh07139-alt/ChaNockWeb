@@ -1,94 +1,173 @@
 [
   {
-    "id": "nature-01",
-    "title": "Misty Sunrise Peaks",
-    "description": "A dramatic sunrise over mountains, capturing the layered mist and first light piercing the valleys.",
-    "category": "nature",
-    "type": "image",
-    "src": "/src/assets/portfolio_nature.png",
-    "order": 1,
-    "metadata": {
-      "camera": "Sony Alpha 7R V",
-      "lens": "FE 24-70mm F2.8 GM II",
-      "aperture": "f/8.0",
-      "shutterSpeed": "1/160s",
-      "iso": "100",
-      "location": "Seoraksan, South Korea",
-      "date": "2026-05-12"
+    "Id": "work1-01",
+    "Title": "Silent Space I",
+    "Description": "Taboo / 2026",
+    "Category": "completed",
+    "Type": "image",
+    "Src": "/src/assets/KakaoTalk_20260709_232335850.jpg",
+    "Poster": null,
+    "Order": 1,
+    "Metadata": {
+      "Camera": "Sony Alpha",
+      "Lens": "FE 24-70mm F2.8 GM II",
+      "Aperture": "f/2.8",
+      "ShutterSpeed": "1/125s",
+      "Iso": "100",
+      "Location": "Korea",
+      "Date": "2026"
     }
   },
   {
-    "id": "portrait-01",
-    "title": "The Wisdom of Wrinkles",
-    "description": "Artistic high-contrast portrait emphasizing natural texture, character, and depth of expressions.",
-    "category": "portrait",
-    "type": "image",
-    "src": "/src/assets/portfolio_portrait.png",
-    "order": 2,
-    "metadata": {
-      "camera": "Fujifilm GFX 100S",
-      "lens": "GF 110mm F2 R LM WR",
-      "aperture": "f/2.0",
-      "shutterSpeed": "1/125s",
-      "iso": "200",
-      "location": "Seoul Studio, South Korea",
-      "date": "2026-04-05"
+    "Id": "work1-02",
+    "Title": "Silent Space II",
+    "Description": "Taboo / 2026",
+    "Category": "completed",
+    "Type": "image",
+    "Src": "/src/assets/KakaoTalk_20260709_232335850_01.jpg",
+    "Poster": null,
+    "Order": 2,
+    "Metadata": {
+      "Camera": "Sony Alpha",
+      "Lens": "FE 24-70mm F2.8 GM II",
+      "Aperture": "f/2.8",
+      "ShutterSpeed": "1/125s",
+      "Iso": "100",
+      "Location": "Korea",
+      "Date": "2026"
     }
   },
   {
-    "id": "arch-01",
-    "title": "Concrete Shadow Geometry",
-    "description": "Minimalist composition of modern concrete geometry under sharp sunlight, focusing on shadows and negative space.",
-    "category": "architecture",
-    "type": "image",
-    "src": "/src/assets/portfolio_architecture.png",
-    "order": 3,
-    "metadata": {
-      "camera": "Leica Q3",
-      "lens": "Summilux 28mm f/1.7 ASPH",
-      "aperture": "f/5.6",
-      "shutterSpeed": "1/500s",
-      "iso": "100",
-      "location": "Dongdaemun Design Plaza, Seoul",
-      "date": "2026-06-20"
+    "Id": "work1-03",
+    "Title": "Silent Space III",
+    "Description": "Taboo / 2026",
+    "Category": "completed",
+    "Type": "image",
+    "Src": "/src/assets/KakaoTalk_20260709_232335850_02.jpg",
+    "Poster": null,
+    "Order": 3,
+    "Metadata": {
+      "Camera": "Sony Alpha",
+      "Lens": "FE 24-70mm F2.8 GM II",
+      "Aperture": "f/2.8",
+      "ShutterSpeed": "1/125s",
+      "Iso": "100",
+      "Location": "Korea",
+      "Date": "2026"
     }
   },
   {
-    "id": "video-01",
-    "title": "Flowing Water Semiotics",
-    "description": "A cinemagraph-style loop of forest water rapids, expressing the continuous passage of time.",
-    "category": "video",
-    "type": "video",
-    "src": "https://assets.mixkit.co/videos/preview/mixkit-forest-stream-in-the-sunlight-529-large.mp4",
-    "poster": "/src/assets/portfolio_nature.png",
-    "order": 4,
-    "metadata": {
-      "camera": "RED V-Raptor 8K",
-      "lens": "Zeiss Supreme Prime 50mm",
-      "aperture": "T/2.0",
-      "shutterSpeed": "1/100s (180° Shutter)",
-      "iso": "800",
-      "location": "Gangwon Valley, South Korea",
-      "date": "2026-06-01"
+    "Id": "work1-04",
+    "Title": "Silent Space IV",
+    "Description": "Taboo / 2026",
+    "Category": "completed",
+    "Type": "image",
+    "Src": "/src/assets/KakaoTalk_20260709_232335850_03.jpg",
+    "Poster": null,
+    "Order": 4,
+    "Metadata": {
+      "Camera": "Sony Alpha",
+      "Lens": "FE 24-70mm F2.8 GM II",
+      "Aperture": "f/2.8",
+      "ShutterSpeed": "1/125s",
+      "Iso": "100",
+      "Location": "Korea",
+      "Date": "2026"
     }
   },
   {
-    "id": "video-02",
-    "title": "Urban Traffic Trails",
-    "description": "Time-lapse loop showcasing dynamic city light trails, contrasting motion with static architecture.",
-    "category": "video",
-    "type": "video",
-    "src": "https://assets.mixkit.co/videos/preview/mixkit-night-time-lapse-of-a-busy-city-intersection-40615-large.mp4",
-    "poster": "/src/assets/portfolio_architecture.png",
-    "order": 5,
-    "metadata": {
-      "camera": "Sony Alpha 7S III",
-      "lens": "FE 16-35mm F2.8 GM",
-      "aperture": "f/11",
-      "shutterSpeed": "2s (Time-lapse)",
-      "iso": "80",
-      "location": "Teheran-ro, Seoul",
-      "date": "2026-06-15"
+    "Id": "work1-05",
+    "Title": "Silent Space V",
+    "Description": "Taboo / 2026",
+    "Category": "completed",
+    "Type": "image",
+    "Src": "/src/assets/KakaoTalk_20260709_232335850_04.jpg",
+    "Poster": null,
+    "Order": 5,
+    "Metadata": {
+      "Camera": "Sony Alpha",
+      "Lens": "FE 24-70mm F2.8 GM II",
+      "Aperture": "f/2.8",
+      "ShutterSpeed": "1/125s",
+      "Iso": "100",
+      "Location": "Korea",
+      "Date": "2026"
+    }
+  },
+  {
+    "Id": "work2-01",
+    "Title": "Silent Space VI",
+    "Description": "Untitled / 2026",
+    "Category": "in-progress",
+    "Type": "image",
+    "Src": "/src/assets/KakaoTalk_20260715_233246642.jpg",
+    "Poster": null,
+    "Order": 6,
+    "Metadata": {
+      "Camera": "Sony Alpha",
+      "Lens": "FE 24-70mm F2.8 GM II",
+      "Aperture": "f/2.8",
+      "ShutterSpeed": "1/125s",
+      "Iso": "100",
+      "Location": "Korea",
+      "Date": "2026"
+    }
+  },
+  {
+    "Id": "work2-02",
+    "Title": "Silent Space VII",
+    "Description": "Untitled / 2026",
+    "Category": "in-progress",
+    "Type": "image",
+    "Src": "/src/assets/KakaoTalk_20260715_233246642_01.jpg",
+    "Poster": null,
+    "Order": 7,
+    "Metadata": {
+      "Camera": "Sony Alpha",
+      "Lens": "FE 24-70mm F2.8 GM II",
+      "Aperture": "f/2.8",
+      "ShutterSpeed": "1/125s",
+      "Iso": "100",
+      "Location": "Korea",
+      "Date": "2026"
+    }
+  },
+  {
+    "Id": "work2-03",
+    "Title": "Silent Space VIII",
+    "Description": "Untitled / 2026",
+    "Category": "in-progress",
+    "Type": "image",
+    "Src": "/src/assets/KakaoTalk_20260715_233246642_02.jpg",
+    "Poster": null,
+    "Order": 8,
+    "Metadata": {
+      "Camera": "Sony Alpha",
+      "Lens": "FE 24-70mm F2.8 GM II",
+      "Aperture": "f/2.8",
+      "ShutterSpeed": "1/125s",
+      "Iso": "100",
+      "Location": "Korea",
+      "Date": "2026"
+    }
+  },
+  {
+    "Id": "work2-04",
+    "Title": "Silent Space IX",
+    "Description": "Untitled / 2026",
+    "Category": "in-progress",
+    "Type": "image",
+    "Src": "/src/assets/KakaoTalk_20260715_233246642_03.jpg",
+    "Poster": null,
+    "Order": 9,
+    "Metadata": {
+      "Camera": "Sony Alpha",
+      "Lens": "FE 24-70mm F2.8 GM II",
+      "Aperture": "f/2.8",
+      "ShutterSpeed": "1/125s",
+      "Iso": "100",
+      "Location": "Korea",
+      "Date": "2026"
     }
   }
 ]

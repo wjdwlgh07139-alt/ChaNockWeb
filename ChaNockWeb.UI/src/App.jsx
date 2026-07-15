@@ -1,11 +1,12 @@
 import { useState, useEffect, useRef } from 'react'
 import { portfolioConfig } from './portfolioConfig'
 import './App.css'
+import mainphoto from './assets/mainphoto.jpg'
 
 function App() {
   const [items, setItems] = useState([])
-  const [activeCategory, setActiveCategory] = useState('completed') // 'completed', 'in-progress', 'exhibition', 'about'
-  
+  const [activeCategory, setActiveCategory] = useState('main') // 'main', 'completed', 'in-progress', 'exhibition', 'about'
+
   // Menu State
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -15,7 +16,7 @@ function App() {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [loginError, setLoginError] = useState('')
-  
+
   // API connection details
   const [apiBaseUrl, setApiBaseUrl] = useState('')
   const [apiStatus, setApiStatus] = useState('disconnected')
@@ -24,7 +25,7 @@ function App() {
   const [showAddModal, setShowAddModal] = useState(false)
   const [showEditModal, setShowEditModal] = useState(false)
   const [editingItem, setEditingItem] = useState(null)
-  
+
   // Form fields state
   const [formTitle, setFormTitle] = useState('')
   const [formDesc, setFormDesc] = useState('')
@@ -47,6 +48,17 @@ function App() {
       setIsAdmin(true)
     }
     fetchPortfolio()
+
+    // Prevent context menu (right-click) on media files to protect assets
+    const handleContextMenu = (e) => {
+      if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO') {
+        e.preventDefault()
+      }
+    }
+    document.addEventListener('contextmenu', handleContextMenu)
+    return () => {
+      document.removeEventListener('contextmenu', handleContextMenu)
+    }
   }, [])
 
   // Fetch portfolio data from backend with fallback
@@ -180,8 +192,8 @@ function App() {
     }
 
     try {
-      const url = editingItem 
-        ? `${apiBaseUrl}/portfolio/${editingItem.id}` 
+      const url = editingItem
+        ? `${apiBaseUrl}/portfolio/${editingItem.id}`
         : `${apiBaseUrl}/portfolio`
       const method = editingItem ? 'PUT' : 'POST'
 
@@ -257,25 +269,25 @@ function App() {
 
   // Filter items for current active view
   const filteredItems = items.filter(item => item.category === activeCategory)
-  
+
   // Get active category label
   const activeCategoryLabel = portfolioConfig.categories.find(c => c.id === activeCategory)?.label || ''
 
   // Subtitle to display: from the first item
-  const sectionSubtitle = filteredItems.length > 0 ? (filteredItems[0].subtitle || filteredItems[0].title) : ''
+  const sectionSubtitle = filteredItems.length > 0 ? (filteredItems[0].subtitle || filteredItems[0].description || filteredItems[0].title) : ''
 
   return (
     <div className="portfolio-app minimal-layout">
       {/* Top Navbar */}
       <header className={`portfolio-nav ${isMenuOpen ? 'menu-open' : ''}`}>
         <div className="nav-container">
-          <div className="brand" onClick={() => { setActiveCategory('completed'); setIsMenuOpen(false); }}>
+          <div className="brand" onClick={() => { setActiveCategory('main'); setIsMenuOpen(false); }}>
             {portfolioConfig.brandName}
           </div>
-          
+
           {/* Hamburger Menu Icon (3 lines) */}
-          <button 
-            className={`hamburger-menu-btn ${isMenuOpen ? 'open' : ''}`} 
+          <button
+            className={`hamburger-menu-btn ${isMenuOpen ? 'open' : ''}`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle Navigation Menu"
           >
@@ -303,7 +315,7 @@ function App() {
             </button>
           ))}
         </nav>
-        
+
         {/* Subtle Admin Action Link inside Menu */}
         <div className="admin-menu-footer">
           {isAdmin ? (
@@ -322,6 +334,20 @@ function App() {
         )}
 
         {/* Dynamic View rendering */}
+        {activeCategory === 'main' && (
+          <section className="view-section main-view">
+            <div className="main-photo-container">
+              <img 
+                src={mainphoto} 
+                alt="Main" 
+                className="main-photo"
+                loading="eager"
+                onDragStart={(e) => e.preventDefault()}
+              />
+            </div>
+          </section>
+        )}
+
         {(activeCategory === 'completed' || activeCategory === 'in-progress') && (
           <section className="view-section works-view">
             {/* Header elements inspired by the reference image */}
@@ -401,6 +427,18 @@ function App() {
 
       {/* Footer */}
       <footer className="portfolio-footer">
+        {activeCategory === 'main' && (
+          <div className="main-instagram-link-container">
+            <a 
+              href={portfolioConfig.instagram} 
+              target="_blank" 
+              rel="noreferrer" 
+              className="main-instagram-link"
+            >
+              Instagram
+            </a>
+          </div>
+        )}
         <p>© {new Date().getFullYear()} {portfolioConfig.photographerName}. All rights reserved.</p>
       </footer>
 
@@ -527,9 +565,9 @@ function MediaCard({ item }) {
     <div className={`media-card-item static-item ${item.type}`}>
       <div className="card-media-box">
         {item.type === 'video' ? (
-          <video 
+          <video
             ref={videoRef}
-            src={item.src} 
+            src={item.src}
             poster={item.poster}
             muted
             loop
@@ -538,11 +576,12 @@ function MediaCard({ item }) {
             className="card-asset video-asset"
           />
         ) : (
-          <img 
-            src={item.src} 
-            alt={item.title} 
+          <img
+            src={item.src}
+            alt={item.title}
             loading="lazy"
             className="card-asset image-asset"
+            onDragStart={(e) => e.preventDefault()}
           />
         )}
       </div>

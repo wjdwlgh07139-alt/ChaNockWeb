@@ -32,3 +32,4 @@ C:\Users\hejh0\OneDrive\Desktop\ChaNockWeb\ChaNockWeb.API\obj\Debug\net9.0\ChaNo
 C:\Users\hejh0\OneDrive\Desktop\ChaNockWeb\ChaNockWeb.API\obj\Debug\net9.0\ChaNockWeb.API.genruntimeconfig.cache
 C:\Users\hejh0\OneDrive\Desktop\ChaNockWeb\ChaNockWeb.API\obj\Debug\net9.0\ref\ChaNockWeb.API.dll
 C:\Users\hejh0\OneDrive\Desktop\ChaNockWeb\ChaNockWeb.API\bin\Debug\net9.0\portfolio_data.json
+C:\Users\hejh0\OneDrive\Desktop\ChaNockWeb\ChaNockWeb.API\obj\Debug\net9.0\ChaNockWeb.API.sourcelink.json
